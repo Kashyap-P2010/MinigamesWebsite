@@ -1,0 +1,96 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.cell.taken {
+    pointer-events: none;
+}
+
+#reset {
+    background: #00c6ff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#reset:hover {
+    background: #0072ff;
+}
+
+#status {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid #00f2fe;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #00f2fe;
+    font-size: 1rem;
+    font-weight: bold;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: #00f2fe;
+    color: #004d99;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.8), 0 0 20px rgba(0, 242, 254, 0.6);
+    transform: scale(1.05);
+}

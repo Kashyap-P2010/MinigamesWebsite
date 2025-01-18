@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #1e3a5f, #283f4e);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+canvas {
+    margin: 20px auto;
+    display: block;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#wordDisplay {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    color: #ffd700;
+}
+
+#keyboard {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.key {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a3a3c;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.key:hover {
+    background-color: #5a5a5c;
+}
+
+.key.disabled {
+    background-color: #787c7e;
+    pointer-events: none;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ff7675;
+}
+
+#hintButtons {
+    margin-top: 20px;
+}
+
+.hint-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f39c12;
+    color: #000;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.hint-button:hover {
+    background-color: #e67e22;
+}
+
+#resetButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffd700;
+    color: #000;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#resetButton:hover {
+    background-color: #e5c400;
+}
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid #ffd700;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffd700;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #ffd700;
+    color: #1e3a5f;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.5);
+    transform: scale(1.05);
+}

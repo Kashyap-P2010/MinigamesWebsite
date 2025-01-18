@@ -1,0 +1,124 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #2e3b4e, #1f2937);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tile {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #3a3a3a;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.tile.filled {
+    transform: scale(1.1);
+    border-color: #555;
+}
+
+.tile.correct {
+    background-color: #6aaa64;
+    border-color: #6aaa64;
+}
+
+.tile.present {
+    background-color: #c9b458;
+    border-color: #c9b458;
+}
+
+.tile.absent {
+    background-color: #787c7e;
+    border-color: #787c7e;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 5px;
+    justify-content: center;
+}
+
+.key {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a3a3c;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.key:hover {
+    background-color: #5a5a5c;
+}
+
+.key.correct {
+    background-color: #6aaa64;
+}
+
+.key.present {
+    background-color: #c9b458;
+}
+
+.key.absent {
+    background-color: #787c7e;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid #ffd700;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #ffd700;
+    font-size: 1rem;
+    font-weight: bold;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: #ffd700;
+    color: #1f2937;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.6);
+    transform: scale(1.05);
+}
+
