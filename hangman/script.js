@@ -165,5 +165,5 @@ const revealHint = (event) => {
 };
 
 resetButton.addEventListener("click", initGame);
-
+/* check for doubleclick */
 initGame();
